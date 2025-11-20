@@ -1,0 +1,105 @@
+/* Estilos personalizados para la calculadora */
+
+/* Estilos base para todos los botones */
+.btn {
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Botones numéricos */
+.btn-number {
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+.btn-number:hover {
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-number:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de operadores */
+.btn-operator {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.btn-operator:hover {
+    background-color: #7c3aed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(139, 92, 246, 0.4);
+}
+
+.btn-operator:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(139, 92, 246, 0.3);
+}
+
+/* Botón de igual */
+.btn-equals {
+    background-color: #ec4899;
+    color: white;
+}
+
+.btn-equals:hover {
+    background-color: #db2777;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(236, 72, 153, 0.4);
+}
+
+.btn-equals:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(236, 72, 153, 0.3);
+}
+
+/* Botón especial (Clear) */
+.btn-special {
+    background-color: #ef4444;
+    color: white;
+}
+
+.btn-special:hover {
+    background-color: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(239, 68, 68, 0.4);
+}
+
+.btn-special:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.3);
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+body > div {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .btn {
+        padding: 1rem;
+        font-size: 1.25rem;
+    }
+}

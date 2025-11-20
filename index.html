@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Inteligente</title>
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex items-center justify-center p-4">
+    
+    <!-- Contenedor principal de la calculadora -->
+    <div class="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
+        
+        <!-- Título -->
+        <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Calculadora</h1>
+        
+        <!-- Pantalla de la calculadora -->
+        <div class="mb-6">
+            <input 
+                type="text" 
+                id="display" 
+                class="w-full text-right text-3xl font-semibold p-4 bg-gray-100 rounded-xl border-2 border-gray-300 focus:outline-none focus:border-purple-500 transition-colors"
+                placeholder="0"
+                readonly
+            >
+        </div>
+        
+        <!-- Botones de la calculadora -->
+        <div class="grid grid-cols-4 gap-3">
+            
+            <!-- Fila 1: C y operadores -->
+            <button class="btn btn-special col-span-2" onclick="clearDisplay()">C</button>
+            <button class="btn btn-operator" onclick="appendOperator('/')">/</button>
+            <button class="btn btn-operator" onclick="appendOperator('*')">×</button>
+            
+            <!-- Fila 2: 7, 8, 9, - -->
+            <button class="btn btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn btn-operator" onclick="appendOperator('-')">-</button>
+            
+            <!-- Fila 3: 4, 5, 6, + -->
+            <button class="btn btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn btn-operator" onclick="appendOperator('+')">+</button>
+            
+            <!-- Fila 4: 1, 2, 3 -->
+            <button class="btn btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn btn-number" onclick="appendNumber('3')">3</button>
+            
+            <!-- Fila 5: 0, punto, = -->
+            <button class="btn btn-number col-span-2" onclick="appendNumber('0')">0</button>
+            <button class="btn btn-number" onclick="appendNumber('.')">.</button>
+            <button class="btn btn-equals row-span-2" onclick="calculate()">=</button>
+        </div>
+        
+        <!-- Footer -->
+        <div class="mt-6 text-center text-gray-500 text-sm">
+            <p>Desarrollado con ❤️</p>
+        </div>
+        
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>
