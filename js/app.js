@@ -129,6 +129,31 @@ function clearDisplay() {
     updateDisplay();
 }
 
+/**
+ * Calcula el porcentaje del valor actual
+ * Si hay una operación pendiente, calcula el porcentaje en relación al valor previo
+ * Si no hay operación, simplemente divide el valor actual entre 100
+ */
+function calculatePercentage() {
+    const current = parseFloat(currentValue);
+    
+    // Si hay una operación pendiente y un valor previo
+    if (previousValue !== null && operation !== null) {
+        // Calcular el porcentaje en relación al valor previo
+        // Por ejemplo: 200 + 10% = 200 + (200 * 10/100) = 220
+        const percentageValue = (previousValue * current) / 100;
+        currentValue = percentageValue.toString();
+    } else {
+        // Si no hay operación, simplemente dividir entre 100
+        // Por ejemplo: 50% = 0.5
+        const result = current / 100;
+        currentValue = result.toString();
+        shouldResetDisplay = true;
+    }
+    
+    updateDisplay();
+}
+
 // ========================================
 // MANEJO DE TECLADO (OPCIONAL)
 // ========================================
@@ -179,6 +204,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentValue = '0';
             }
             updateDisplay();
+        }
+        // Porcentaje
+        else if (key === '%') {
+            event.preventDefault();
+            calculatePercentage();
         }
     });
     
