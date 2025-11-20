@@ -8,10 +8,44 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-gradient-to-br from-purple-500 via-pink-500 to-red-500 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900 min-h-screen">
+    
+    <!-- Header Profesional -->
+    <header class="bg-gradient-to-r from-indigo-800 to-blue-800 shadow-lg border-b border-indigo-700">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo y Título -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white rounded-lg p-2 shadow-md">
+                        <svg class="w-8 h-8 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-white">Calculadora Inteligente</h1>
+                        <p class="text-indigo-200 text-sm">Versión 2.0</p>
+                    </div>
+                </div>
+                
+                <!-- Info adicional -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <div class="text-right">
+                        <p class="text-indigo-200 text-sm">Desarrollado por</p>
+                        <p class="text-white font-semibold">Juan David C y Didier Fabian</p>
+                    </div>
+                    <div class="bg-indigo-700 rounded-full p-2">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
     
     <!-- Contenedor principal de la calculadora -->
-    <div class="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
+    <div class="container mx-auto px-4 py-8 flex items-center justify-center min-h-[calc(100vh-80px)]">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
         
         <!-- Título -->
         <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Calculadora</h1>
@@ -61,9 +95,10 @@
         
         <!-- Footer -->
         <div class="mt-6 text-center text-gray-500 text-sm">
-            <p>Desarrollado con ❤️</p>
+            <p>Desarrollado con ❤️ usando TailwindCSS</p>
         </div>
         
+        </div>
     </div>
     
     <!-- JavaScript -->
